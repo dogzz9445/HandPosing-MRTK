@@ -1,3 +1,16 @@
+# [Hand Posing-MRTK] To Start...
+1. requires Mixed Reality Toolkit
+2. edit 'Runtime/MRTK/Profiles/DefaultHandPosingServiceProfile.asset' correctly
+3. add HandPosingService MixedRealityToolkit Extension (..add image)
+4. add correct Prefabs to HandPosingService (Snapping_TrackedHandLeftOVR...)
+5. add components(SkeletonDataProviderOVR, ExtrapolationTrackingCleaner, TipsTriggersOVR) to OVRHandPrefab of OVRCameraRig (to add: clone OVRCameraRig prefab and register XRSDKOculusDeviceManager the prefab)
+
+# [Hand Posing-MRTK] TODO:
+1. add package.json the Mixed Reality Toolkit dependency or MixedRealityToolkit
+2. edit README to provide more description
+3. optimize
+4. make OVRCameraRigPrefab or SampleScene
+
 # HandPosing
 This package uses Oculus Quest hand-tracking to control Oculus default rigged hands and use it to generate grab poses in an instant.
 

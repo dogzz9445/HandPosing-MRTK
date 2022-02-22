@@ -23,6 +23,7 @@ namespace HandPosing
         [SerializeField]
         [Tooltip("The hand-tracking data provider")]
         private SkeletonDataProvider skeleton;
+        public SkeletonDataProvider Skeleton { get => skeleton; set => skeleton = value; }
 
         /// <summary>
         /// Callbacks indicating when the hand tracking has updated.
@@ -31,6 +32,8 @@ namespace HandPosing
         [SerializeField]
         [Tooltip("Callbacks indicating when the hand tracking has updated. Not mandatory.")]
         private AnchorsUpdateNotifier updateNotifier;
+        public AnchorsUpdateNotifier UpdateNotifier { get => updateNotifier; set => updateNotifier = value; }
+
         /// <summary>
         /// Transform for the grip point of the hand. Tipically at the centre of the hand.
         /// It is important that the grip point is well alligned with the palm.
@@ -57,6 +60,8 @@ namespace HandPosing
         [SerializeField]
         [Tooltip("The transform for the tracked controller")]
         private Transform controllerAnchor;
+        public Transform ControllerAnchor { get => controllerAnchor; set => controllerAnchor = value; }
+
         /// <summary>
         /// Offset of the hand when using controllers.
         /// Note that the default position is for when using hand-tracking.

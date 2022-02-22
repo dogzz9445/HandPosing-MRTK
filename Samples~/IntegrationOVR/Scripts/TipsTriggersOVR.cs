@@ -14,6 +14,7 @@ namespace HandPosing.OVRIntegration
     {
         [SerializeField]
         private GrabberHybridOVR grabber;
+        public GrabberHybridOVR Grabber { get => grabber; set => grabber = value; }
 
         [SerializeField]
         private bool disableRest;
@@ -37,16 +38,22 @@ namespace HandPosing.OVRIntegration
 
         private void OnEnable()
         {
-            grabber.OnGrabStarted += ObjectGrabbed;
-            grabber.OnGrabEnded += ObjectReleased;
-            grabber.OnIgnoreTriggers += IgnoreTriggers;
+            if (grabber != null)
+            {
+                grabber.OnGrabStarted += ObjectGrabbed;
+                grabber.OnGrabEnded += ObjectReleased;
+                grabber.OnIgnoreTriggers += IgnoreTriggers;
+            }
         }
 
         private void OnDisable()
         {
-            grabber.OnGrabStarted -= ObjectGrabbed;
-            grabber.OnGrabEnded -= ObjectReleased;
-            grabber.OnIgnoreTriggers -= IgnoreTriggers;
+            if (grabber != null)
+            {
+                grabber.OnGrabStarted -= ObjectGrabbed;
+                grabber.OnGrabEnded -= ObjectReleased;
+                grabber.OnIgnoreTriggers -= IgnoreTriggers;
+            }
         }
 
         /// <summary>

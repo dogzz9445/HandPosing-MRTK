@@ -15,8 +15,10 @@ namespace HandPosing.OVRIntegration.GrabEngine
     {
         [SerializeField]
         private OVRHand flexHand = null;
+        public OVRHand FlexHand { get => flexHand; set => flexHand = value; }
         [SerializeField]
         private OVRSkeleton skeleton = null;
+        public OVRSkeleton Skeleton { get => skeleton; set => skeleton = value; }
 
         [Space]
         [SerializeField]

@@ -49,6 +49,7 @@ namespace HandPosing.Interaction
         [SerializeField]
         [Tooltip("Not mandatory callbacks indicating when the hand tracking has updated.")]
         private AnchorsUpdateNotifier updateNotifier;
+        public AnchorsUpdateNotifier UpdateNotifier { get => updateNotifier; set => updateNotifier = value; }
 
         /// <summary>
         /// Offset from the grip of the hand to the grabbed object.

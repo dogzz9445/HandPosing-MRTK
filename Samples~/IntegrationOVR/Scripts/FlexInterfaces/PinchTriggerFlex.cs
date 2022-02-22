@@ -11,6 +11,7 @@ namespace HandPosing.OVRIntegration.GrabEngine
     {
         [SerializeField]
         private OVRHand flexHand;
+        public OVRHand FlexHand { get => flexHand; set => flexHand = value; }
         [SerializeField]
         private bool trackLowConfidenceFingers = false;
 
